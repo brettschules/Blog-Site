@@ -1,25 +1,15 @@
 import React, { Component } from 'react'
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom'
-import { Segment, Header} from 'semantic-ui-react'
-
-import CocktailsContainer from './CocktailsContainer.js'
-import CocktailDetails from './CocktailDetails.js'
+import Navbar from './Navbar'
 
 class App extends Component {
   render() {
     return (
-    <Router>
-    
     <div>
-      <Route path='/cocktails' 
-      component={CocktailsContainer} />
-
-      
+      <div className = "Navbar">
+        <Navbar />
       </div>
-    </Router>
+      <h1>Testing</h1>
+    </div>
     )
   }
 }

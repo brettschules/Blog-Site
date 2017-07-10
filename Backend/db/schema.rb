@@ -19,14 +19,14 @@ ActiveRecord::Schema.define(version: 20170704014021) do
     t.text     "title"
     t.text     "content"
     t.string   "img_url"
-    t.datetime "date"
+    t.string   "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
     t.text     "text"
-    t.datetime "date"
+    t.string   "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
