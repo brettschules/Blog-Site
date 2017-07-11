@@ -27,12 +27,14 @@ export default class BlogContainer extends React.Component {
 
 
   render() {
+    console.log(this.state.blogs)
     return (
       <div>
-        {this.state.blogs.map(blog =>
-          <Link to={`/blogs/${blog.id}`}>
-          </Link>
-        )}
+      {this.state.blogs.map(blog =>
+        <Link to={`/blogs/${blog.id}`}>
+        {blog.title}
+        </Link>
+      )}
       </div>
     )
   }
