@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-  belongs_to :blog
-  belongs_to :comment
+  has_many :comments
+  has_many :blogs
+
 
   has_secure_password
 end

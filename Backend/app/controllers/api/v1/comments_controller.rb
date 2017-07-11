@@ -1,5 +1,9 @@
+module Api
+  module V1
+
 class CommentsController < ApplicationController
   def index
+
     render json: Comment.all
   end
 
@@ -23,3 +27,5 @@ class CommentsController < ApplicationController
 
   end
 end
+end
+end 

@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
-  has_many :users
-  has_many :blogs, through: :users
+  belongs_to :user
+  belongs_to :blog
 end

@@ -1,19 +1,23 @@
 import React from 'react'
+import { Form, Input, TextArea, Button } from 'semantic-ui-react'
 
-class LoginForm extends React.Component {
+
+export default class LoginForm extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
       username: "",
       password: "",
+      login: true
     }
   }
 
   handleSubmit = (e) => {
+    e.preventDefault()
     this.setState({
-      e.eventPreventDefault()
-      username
+      username: e.target.value,
+      password: e.target.value
     })
   }
 
@@ -26,16 +30,15 @@ class LoginForm extends React.Component {
 
   render () {
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <label>Username:
-          <input type="text" value={this.state.username} onChange={handleChange} />
+          <input type="text" value={this.state.username} onChange={this.handleChange} />
         </label>
         <label>password:
-          <input type="text" value={this.state.password} onChange={handleChange} />
+          <input type="text" value={this.state.password} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit" />
-      </Form>
-
+      </form>
     )
   }
 }

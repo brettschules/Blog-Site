@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170704014021) do
+ActiveRecord::Schema.define(version: 20170711170528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +19,15 @@ ActiveRecord::Schema.define(version: 20170704014021) do
     t.text     "title"
     t.text     "content"
     t.string   "img_url"
-    t.string   "date"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
     t.text     "text"
-    t.string   "date"
+    t.integer  "blog_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,12 +37,7 @@ ActiveRecord::Schema.define(version: 20170704014021) do
     t.string  "password_digest"
     t.integer "age"
     t.string  "gender"
-    t.integer "blog_id"
-    t.integer "comment_id"
-    t.index ["blog_id"], name: "index_users_on_blog_id", using: :btree
-    t.index ["comment_id"], name: "index_users_on_comment_id", using: :btree
+    t.string  "name"
   end
 
-  add_foreign_key "users", "blogs"
-  add_foreign_key "users", "comments"
 end

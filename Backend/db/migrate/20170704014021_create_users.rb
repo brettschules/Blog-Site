@@ -6,8 +6,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.integer :age
       t.string :gender
 
-      t.references :blog, foreign_key: true
-      t.references :comment, foreign_key: true
     end
   end
 end

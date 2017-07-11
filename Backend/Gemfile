@@ -7,6 +7,10 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'pg', '~> 0.18'
 gem 'active_model_serializers'
 gem 'rack-cors'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 2.7.2'
+gem 'jquery-rails'
+
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
