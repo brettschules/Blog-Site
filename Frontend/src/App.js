@@ -3,6 +3,7 @@ import Navbar from './MainPage/Navbar'
 import LoginForm from './MainPage/LoginForm'
 import BlogDetail from './Blog/BlogDetail'
 import BlogContainer from './Blog/BlogContainer'
+import CommentDetails from './Comment/CommentDetails'
 import Home from './MainPage/Home'
 import {
   BrowserRouter as Router,
@@ -25,6 +26,9 @@ class App extends Component {
 
             <Route path='/blogs/:blogId'
             component={BlogDetail} />
+
+            <Route path='/comments/:commentId'
+              component={CommentDetails} />
           </div>
       </Router>
 

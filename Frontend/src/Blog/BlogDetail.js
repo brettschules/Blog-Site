@@ -1,13 +1,15 @@
 import React from 'react'
+import CommentContainer from '../Comment/CommentContainer'
 const BASEURL = "http://localhost:3000/api/v1/blogs/"
 export default class BlogDetail extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      blogDetails: []
+      blogDetails: [],
+      userDetails: [],
+      commentsURL: ""
     }
-
   }
 
   componentWillMount() {
@@ -15,18 +17,32 @@ export default class BlogDetail extends React.Component {
   }
 
   fetchURL() {
+
     const URL = BASEURL + this.props.match.params.blogId
     fetch(URL)
     .then(resp => resp.json())
     .then(data => this.setState({
-      blogDetails: data
+      blogDetails: data,
+      userDetails: data.user,
     }))
+    this.setState({
+      commentsURL: URL
+    })
   }
 
   render() {
     return (
       <div>
-      <h1>  a blog </h1>
+        <div>
+          <h1>{this.state.blogDetails.title}</h1>
+          <p>By: {this.state.userDetails.name}</p>
+        </div>
+        <div>
+          <h1>{this.state.blogDetails.content}</h1>
+        </div>
+        <div>
+          <CommentContainer commentsURL={this.state.commentsURL}/>
+        </div>
       </div>
     )
   }
