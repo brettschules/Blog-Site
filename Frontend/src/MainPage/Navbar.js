@@ -31,9 +31,10 @@ class Navbar extends React.Component {
     if(!this.state.login) {
      return (
        <Menu inverted color="blue" position='left' size="huge">
-         <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+         <Menu.Item name='Home' active={activeItem === 'Home'} onClick={this.handleItemClick} />
          <Menu.Item name='About' active={activeItem === 'About'} onClick={this.handleItemClick} />
          <Menu.Item name='Contact' active={activeItem === 'Contact'} onClick={this.handleItemClick} />
+         <Menu.Item name='NewForm' active={activeItem === 'NewForm'} onClick={this.handleItemClick} />
 
          <Menu.Menu position="right">
            <Menu.Item >
@@ -43,7 +44,7 @@ class Navbar extends React.Component {
             <Form.Input placeholder='Password' name='password' onChange={this.handleChange} />
             <Form.Button content='Login' />
            </Form.Group>
-    </Form>
+           </Form>
 
            </Menu.Item>
 
@@ -64,6 +65,7 @@ class Navbar extends React.Component {
    }
 
    if (this.state.activeItem === "home") {
+     debugger
      return (
        <Link to="/blogs"></Link>
      )

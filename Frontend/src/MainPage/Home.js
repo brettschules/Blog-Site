@@ -15,11 +15,9 @@ export default class Home extends React.Component {
     return (
       <div>
         <div>
-          <Navbar />
+        
         </div>
-        <div>
-          <BlogContainer />
-        </div>
+
       </div>
 
     )

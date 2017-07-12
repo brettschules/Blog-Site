@@ -4,6 +4,7 @@ import LoginForm from './MainPage/LoginForm'
 import BlogDetail from './Blog/BlogDetail'
 import BlogContainer from './Blog/BlogContainer'
 import CommentDetails from './Comment/CommentDetails'
+import NewBlogForm from './Blog/NewBlogForm'
 import Home from './MainPage/Home'
 import {
   BrowserRouter as Router,
@@ -29,6 +30,9 @@ class App extends Component {
 
             <Route path='/comments/:commentId'
               component={CommentDetails} />
+
+            <Route path='/newblog'
+              component={NewBlogForm} />
           </div>
       </Router>
 
