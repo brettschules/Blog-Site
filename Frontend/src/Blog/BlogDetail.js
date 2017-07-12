@@ -8,7 +8,6 @@ export default class BlogDetail extends React.Component {
     this.state = {
       blogDetails: [],
       userDetails: [],
-      commentsURL: "",
       blogComments: []
     }
   }
@@ -27,9 +26,6 @@ export default class BlogDetail extends React.Component {
       userDetails: data.user,
       blogComments: data.comments
     }))
-    this.setState({
-      commentsURL: URL
-    })
   }
 
   render() {
@@ -44,7 +40,7 @@ export default class BlogDetail extends React.Component {
           <h1>{this.state.blogDetails.content}</h1>
         </div>
         <div>
-          <CommentContainer comments={this.state.blogComments}/>
+          <CommentContainer comments={this.state.blogComments} />
         </div>
       </div>
     )

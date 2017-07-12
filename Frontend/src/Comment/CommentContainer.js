@@ -11,6 +11,8 @@ export default class CommentContainer extends React.Component {
 
 }
 
+
+
   render() {
     return(
   <div>
@@ -22,16 +24,13 @@ export default class CommentContainer extends React.Component {
         <Comment>
           <Comment.Avatar src='http://www.aguynamedguy.co.uk/wp-content/uploads/2015/11/stupid-grin-sm.jpg' />
           <Comment.Content>
-          <Comment.Author as='a'>Matt</Comment.Author>
+          <Comment.Author as='a'>{comment.user_id}</Comment.Author>
           <Comment.Metadata>
-            <div>Today at 5:42PM</div>
+            <div>{comment.created_at}</div>
           </Comment.Metadata>
           <Comment.Text> <Link to={`/comments/${comment.id}`}>
              {comment.text}
            </Link></Comment.Text>
-          <Comment.Actions>
-            <Comment.Action>Reply</Comment.Action>
-            </Comment.Actions>
           </Comment.Content>
         </Comment>
       </Comment.Group>
