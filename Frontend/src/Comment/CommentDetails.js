@@ -28,11 +28,12 @@ export default class CommentDetail extends React.Component {
 
 
   render() {
+    console.log(this.state.commentUser)
     return(
 
       <div>
         <h1>{this.state.commentText}</h1>
-        <p>By: {this.state.commentUser.name}</p>
+        <p>By: {this.state.commentUser.username}</p>
       </div>
     )
   }

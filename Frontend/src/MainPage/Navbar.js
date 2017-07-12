@@ -15,8 +15,14 @@ class Navbar extends React.Component {
     }
   }
 
+  linkTo = (name) => {
+    console.log(name)
+    // <Link to='/blogs'>
+  }
+
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name })
+    this.linkTo(name)
   }
   handleChange = (e, { name, value }) => this.setState({ [name]: value })
   handleSubmit = e => this.setState({
@@ -31,10 +37,10 @@ class Navbar extends React.Component {
     if(!this.state.login) {
      return (
        <Menu inverted color="blue" position='left' size="huge">
-         <Menu.Item name='Home' active={activeItem === 'Home'} onClick={this.handleItemClick} />
+         <Menu.Item name='blogs' active={activeItem === 'Home'} onClick={this.handleItemClick} />
          <Menu.Item name='About' active={activeItem === 'About'} onClick={this.handleItemClick} />
          <Menu.Item name='Contact' active={activeItem === 'Contact'} onClick={this.handleItemClick} />
-         <Menu.Item name='NewForm' active={activeItem === 'NewForm'} onClick={this.handleItemClick} />
+         <Menu.Item name='Add Blog' active={activeItem === 'NewForm'} onClick={this.handleItemClick} />
 
          <Menu.Menu position="right">
            <Menu.Item >
@@ -62,13 +68,6 @@ class Navbar extends React.Component {
          <Menu.Item name='Contact' active={activeItem === 'Contact'} onClick={this.handleItemClick} />
         </Menu>
        )
-   }
-
-   if (this.state.activeItem === "home") {
-     debugger
-     return (
-       <Link to="/blogs"></Link>
-     )
    }
   }
 
