@@ -16,8 +16,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
       <Router>
+      <div>
+      <Navbar />
         <div>
           <Route exact path='/blogs'
             component={BlogContainer}/>
@@ -34,7 +35,10 @@ class App extends Component {
             <Route path='/newblog'
               component={NewBlogForm} />
           </div>
-      </Router>
+
+          </div>
+          </Router>
+
 
       </div>
 
