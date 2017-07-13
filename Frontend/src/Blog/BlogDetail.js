@@ -2,8 +2,8 @@ import React from 'react'
 import CommentContainer from '../Comment/CommentContainer'
 const BASEURL = "http://localhost:3000/api/v1/blogs/"
 export default class BlogDetail extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
 
     this.state = {
       blogDetails: [],

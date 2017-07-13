@@ -17,7 +17,6 @@ class Navbar extends React.Component {
 
   linkTo = (name) => {
     console.log(name)
-    // <Link to='/blogs'>
   }
 
   handleItemClick = (e, { name }) => {
