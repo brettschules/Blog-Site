@@ -6,6 +6,8 @@ import BlogContainer from './Blog/BlogContainer'
 import CommentDetails from './Comment/CommentDetails'
 import NewBlogForm from './Blog/NewBlogForm'
 import Home from './MainPage/Home'
+import About from './StaticPages/About'
+import Contact from './StaticPages/Contact'
 import {
   BrowserRouter as Router,
   Route
@@ -34,6 +36,13 @@ class App extends Component {
 
             <Route path='/newblog'
               component={NewBlogForm} />
+
+            <Route path='/about'
+              component={About} />
+
+            <Route path='/contact'
+              component={Contact} />
+
           </div>
 
           </div>
